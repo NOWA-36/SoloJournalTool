@@ -1,0 +1,21 @@
+#deckControls {
+  display: flex; /* 横並びにする */
+  justify-content: space-around; /* 均等配置 */
+  align-items: center;
+  flex-wrap: wrap; /* 画面幅が狭い場合に折り返す */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.deck-container {
+  display: flex;
+  flex-direction: column; /* 縦並び */
+  align-items: center; /* 中央揃え */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  width: 120px; /* 固定幅 */
+  text-align: center;
+}
+
