@@ -60,10 +60,13 @@ const deleteButton = document.getElementById("deleteMemo");
 
   // 山札リセットボタンのイベント
   resetDeckButton.addEventListener("click", () => {
-    const includeJoker = includeJokerCheckbox.checked;
-    initializeDeck(includeJoker);
-    appendToMemoInput("山札をリセットしました。");
-  });
+    if (confirm("本当にリセットしますか？")) { // 確認ダイアログを表示
+      const includeJoker = includeJokerCheckbox.checked;
+      initializeDeck(includeJoker);
+      appendToMemoInput("山札をリセットしました。");
+    }
+  }
+  );
 
   // 初期化
   initializeDeck(includeJokerCheckbox.checked);
@@ -157,22 +160,6 @@ function getNextLogKey() {
   const nextNumber = maxNumber + 1;
   return `${prefix}${String(nextNumber).padStart(2, "0")}`; // 2桁ゼロ埋め
 }
-
-// 保存ボタンの処理
-/*saveButton.addEventListener("click", () => {
-    const memoContent = memoInput.value.trim();
-    if(memoContent){
-        const content = memoInput.value;
-        const date = new Date().toLocaleString();
-
-        const logKey = currentLogKey || getNextLogKey(); // 既存キーがあれば使用、なければ新規生成
-        const memoData = { content, date };
-
-        localStorage.setItem(logKey, JSON.stringify(memoData));
-        alert("メモが保存されました！");
-        window.location.href = "index.html";
-    }
-});*/
 
 // 削除ボタンの処理
 if (currentLogKey) {
