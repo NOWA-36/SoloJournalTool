@@ -415,7 +415,7 @@ a {
 	}
 }
 textarea#memoInput {
-  width: 90%;
+  width: 100%;
   min-height: 200px;
   resize: vertical;
   overflow-y: auto;
@@ -430,9 +430,15 @@ textarea#memoInput {
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 .warning {
   background-color: #ffdddd;
   border: 1px solid #ff8888;
+}
+#titleInput {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
 }
