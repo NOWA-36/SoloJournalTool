@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -122,4 +122,25 @@ input[type="number"] {
   font-size: 1.6em;
   color: #2c3e50;
   margin: 2em 0 1em;
+}
+
+/* 不要なoutline除去 */
+body:focus,
+div:focus,
+h1:focus,
+br:focus,
+section:focus {
+  outline: none;
+}
+
+/* 入力系は残す＆見やすく */
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 2px solid #4a90e2;
+}
+
+/* タップ時の青ハイライト除去（スマホ） */
+* {
+  -webkit-tap-highlight-color: transparent;
 }
