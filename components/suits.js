@@ -57,10 +57,10 @@ function updateRemainingCounts() {
 function formatCard(card) {
   const [suit, value] = card.split("-");
   const suitSymbols = {
-    spades: "スペード",
-    hearts: "ハート",
-    diamonds: "ダイヤ",
-    clubs: "クラブ",
+    spades: "♠",
+    hearts: "♡",
+    diamonds: "♢",
+    clubs: "♣",
   };
   const faceCards = { "1": "A", "11": "J", "12": "Q", "13": "K" };
   const displayValue = faceCards[value] || value;

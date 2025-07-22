@@ -19,7 +19,7 @@ const saveButton = document.getElementById("saveMemo");
 const deleteButton = document.getElementById("deleteMemo");
 
   let deck = [];
-  const suits = ["ハート", "ダイヤ", "スペード", "クラブ"];
+  const suits = ["♡", "♢", "♠", "♣"];
   const values = [
     "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
   ];

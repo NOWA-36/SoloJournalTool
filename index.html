@@ -7,7 +7,7 @@
     <script src="components/memo.js"></script>
     <script src="components/suits.js"></script>
     <script src="components/tab.js"></script>
-    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/suits.css">
     <link rel="stylesheet" href="css/tab.css">
@@ -21,12 +21,13 @@
 </head>
 <body>
   <div class="wrapper">
-    <h1 class="heading-36">プレイログ作成</h1>
-    <br
+    <h1 class="heading-softbox">ソロジャーナルプレイログ</h1>
+    <br>
     <!-- タイトル入力 -->
-    <input id="titleInput" type="text" placeholder="ファイルのタイトルを入力してください">
-
+    <input id="titleInput" type="text" placeholder="タイトルを入力してください">
+    <br>
     <!-- タブメニュー -->
+     <br>
     <div id="tabMenu">
       <button class="tab-button active" data-tab="tab1">ダイス</button>
       <button class="tab-button" data-tab="tab2">トランプ</button>
@@ -36,53 +37,53 @@
       <!-- ダイスロール -->
       <div class="tab-content active" id="tab1">
         <div id="diceRoller">
-          <h2>ダイスを振る</h2>
+          <h3>ダイスを振る</h3>
           <label for="diceSides">何面ダイス:</label>
           <input type="number" id="diceSides" min="2" placeholder="例: 6" width="50px">
           <label for="diceCount">何個振る:</label>
           <input type="number" id="diceCount" min="1" placeholder="例: 2" width="50px">
-          <button class="btn-flat-border" id="rollButton">ダイスを振る</button>
+          <button class="button-secondary" id="rollButton">ダイスを振る</button>
         </div>
       </div>
       <div class="tab-content" id="tab2">
         <!-- トランプ引き -->
         <div id="cardDrawer">
-          <h2>トランプを引く</h2>
+          <h3>トランプを引く</h3>
           <fieldset class="checkbox-1">
             <label>
-                <input type="checkbox" name="checkbox-1"  id="includeJoker" />
+              <input type="checkbox" name="checkbox-1"  id="includeJoker" />
                 ジョーカーを含める
             </label>
           </fieldset>
-          <button class="btn-flat-border"  id="drawCardButton">カードを引く</button>
-          <button class="btn-flat-border warning"  id="resetDeckButton">山札をリセット</button>
+          <button class="button-secondary"  id="drawCardButton">カードを引く</button>
+          <button class="button-warning"  id="resetDeckButton">山札をリセット</button>
           <p id="deckStatus">山札にカードが52枚あります。</p>
           <p id="deckStatus">※ジョーカーを含めるチェックを切り替えた場合、山札をリセットすることで反映されます</p>
         </div>
       </div>
       <div class="tab-content" id="tab3">
-        <h2>スートごとの山札</h2>
+        <h3>スートごとの山札</h3>
         <section id="deckControls">
         <div class="deck-container" id="spades">
-          <button class="btn-flat-border" onclick="drawCard('spades')">スペードから引く</button>
+          <button class="button-secondary" onclick="drawCard('spades')">♠から引く</button>
           <p id="spadesRemaining"></p>
         </div>
         <div class="deck-container" id="hearts">
-          <button class="btn-flat-border" onclick="drawCard('hearts')">ハートから引く</button>
+          <button class="button-secondary" onclick="drawCard('hearts')">♡から引く</button>
           <p id="heartsRemaining"></p>
         </div>
         <div class="deck-container" id="diamonds">
-          <button class="btn-flat-border" onclick="drawCard('diamonds')">ダイヤから引く</button>
+          <button class="button-secondary" onclick="drawCard('diamonds')">♢から引く</button>
           <p id="diamondsRemaining"></p>
         </div>
         <div class="deck-container" id="clubs">
-          <button class="btn-flat-border" onclick="drawCard('clubs')">クラブから引く</button>
+          <button class="button-secondary" onclick="drawCard('clubs')">♣から引く</button>
           <p id="clubsRemaining"></p>
         </div>
         </section>
         <br>
         <section id="actions">
-          <button class="btn-flat-border" id="resetDecks">スートごとの山札をリセット</button>
+          <button class="button-warning" id="resetDecks">スートごとの山札をリセット</button>
         </section>
       </div>
     </div>
@@ -90,11 +91,9 @@
     <!-- メモ入力 -->
     <textarea id="memoInput" placeholder="ここにログを入力してください"></textarea>
     <!--  <button class="btn-flat-border"  id="saveMemo">メモを保存</button> -->
-    <button class="btn-flat-border"  id="clearButton">クリア</button>
+    <button class="button-warning"  id="clearButton">クリア</button>
     <br> <br>
-    <button class="btn-flat-border"  id="downloadButton">メモをダウンロード</button>
-    <br> <br>
-    <button id="deleteMemo" style="display: none;">削除</button>
+    <button class="button-primary"  id="downloadButton">ログをダウンロード</button>
     <br> <br>
     <br> 
     <a href= "https://forms.gle/S4FzJJ2E9cRGUr78A" >ご意見はこちら</a>
