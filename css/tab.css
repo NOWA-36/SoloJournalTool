@@ -1,12 +1,13 @@
-/* This is a CSS file */
-
 /* タブメニューのスタイル */
 #tabMenu {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* 左寄せにすることで横スクロールが自然になる */
   gap: 10px;
   margin-bottom: 20px;
   width: 100%;
+  overflow-x: auto; /* スマホ対応で横スクロール可能に */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 5px;
   box-sizing: border-box;
 }
 
@@ -17,6 +18,8 @@
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
+  white-space: nowrap;     /* 改行防止 */
+  flex-shrink: 0;           /* 縮まないようにする */
 }
 
 .tab-button.active {
