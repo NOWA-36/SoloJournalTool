@@ -21,13 +21,16 @@
 </head>
 <body>
   <div class="wrapper">
-    <h1 class="heading-softbox">ソロジャーナル<br>プレイログ</h1>
-    <br>
+    <header class="site-header">
+  <h1>ソロジャーナルプレイログ</h1>
+  <p class="site-subtitle">一人で物語を綴るための、簡単な記録ツールです。</p>
+</header>
+    <p class="about">これはソロジャーナルゲーム用の記録ツールです。<br>ログを書きながら、ダイスやカードを引いて遊ぶことができます。</p>
+
     <!-- タイトル入力 -->
     <input id="titleInput" type="text" placeholder="タイトルを入力してください">
-    <br>
+ 
     <!-- タブメニュー -->
-     <br>
     <div id="tabMenu">
       <button class="tab-button active" data-tab="tab1">ダイス</button>
       <button class="tab-button" data-tab="tab2">トランプ</button>
@@ -57,8 +60,10 @@
                 ジョーカーを含める
             </label>
           </fieldset>
+          <div class="button-container">
           <button class="button-secondary"  id="drawCardButton">カードを引く</button>
           <button class="button-warning"  id="resetDeckButton">山札をリセット</button>
+          </div>
           <p id="deckStatus">山札にカードが52枚あります。</p>
           <p id="deckStatus">※ジョーカーを含めるチェックを切り替えた場合、山札をリセットすることで反映されます</p>
         </div>
@@ -83,22 +88,28 @@
           <p id="clubsRemaining"></p>
         </div>
         </section>
-        <br>
         <section id="actions">
           <button class="button-warning" id="resetDecks">スートごとの山札をリセット</button>
         </section>
       </div>
     </div>
-    <br>
+
     <!-- メモ入力 -->
+    <h3>メモ</h3>
+    <label for="memoInput">プレイログを記入してください</label>
     <textarea id="memoInput" placeholder="ここにログを入力してください"></textarea>
     <!--  <button class="btn-flat-border"  id="saveMemo">メモを保存</button> -->
+      <div class="button-container">
     <button class="button-warning"  id="clearButton">クリア</button>
-    <br> <br>
     <button class="button-primary"  id="downloadButton">ログをダウンロード</button>
-    <br> <br>
-    <br> 
-    <a href= "https://forms.gle/S4FzJJ2E9cRGUr78A" >ご意見はこちら</a>
+    </div>
+
+    <footer class="site-footer">
+  <p>このツールは個人が趣味で開発しています。</p>
+  <p>このサイトは <a href="https://picnicss.com" target="_blank">Picnic CSS</a> を使用しています。</p>
+
+  <p><a href="https://forms.gle/S4FzJJ2E9cRGUr78A">ご意見はこちら</a></p>
+</footer>
     
   </div>
 </body>

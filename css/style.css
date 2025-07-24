@@ -144,3 +144,53 @@ button:focus {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+    .button-container {
+      display: flex;
+      gap: 10px; /* ボタン間のスペース */
+    }
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+
+    .site-header {
+  text-align: center;
+  padding: 1.5em 0 1em;
+  background: #ffffffa0;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1em;
+}
+.site-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3em;
+  color: #333;
+}
+.site-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+.site-footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 3em;
+  padding: 1em;
+  border-top: 1px solid #ccc;
+}
+.site-footer a {
+  color: #007bff;
+}
+
+h1, h2, h3, h4, h5, h6,p,br,label,
+label, .tab-button, .site-header, footer {
+  user-select: none;
+  cursor: default;
+}
+
+p,input{
+    margin-bottom: 1em;
+}
