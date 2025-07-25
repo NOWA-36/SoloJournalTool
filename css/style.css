@@ -221,4 +221,9 @@ h1{
   .button-warning, .button-primary, .button-secondary {
     font-size: 0.95rem;
   }
+  #cardDrawer button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
