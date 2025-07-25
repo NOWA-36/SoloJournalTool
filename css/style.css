@@ -221,8 +221,17 @@ h1{
   .button-warning, .button-primary, .button-secondary {
     font-size: 0.95rem;
   }
-  #cardDrawer button {
+  #cardDrawer .button-warning,
+  #cardDrawer .button-secondary {
     display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .button-container {
+    flex-direction: column;
+  }
+
+  .button-container button {
     width: 100%;
     margin-bottom: 10px;
   }
