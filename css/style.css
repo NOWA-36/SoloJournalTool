@@ -194,3 +194,25 @@ label, .tab-button, .site-header, footer {
 p,input{
     margin-bottom: 1em;
 }
+
+
+h1, h2, h3, button, .button-warning, .button-primary, .button-secondary {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+/* スマホ向け微調整 */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .button-warning, .button-primary, .button-secondary {
+    font-size: 0.95rem;
+  }
+}
